@@ -5,6 +5,6 @@ for i in range(10):
             continue
         else:
             if (i < 9):
-                print(f"{i}{j}", end=", ")
+                print('{}{}'.format(i, j), end=", ")
             else:
-                print(f"{i}{j}")
+                print('{}{}'.format(i, j))
