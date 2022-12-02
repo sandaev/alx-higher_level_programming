@@ -22,3 +22,4 @@ if __name__ == "__main__":
         else:
             result = int(div(a, b))
         print('{} {} {} = {}'.format(a, apr, b, result))
+       exit(0)
