@@ -7,27 +7,26 @@
  *
  * Return: pointer to copy of list
  */
-listint_t *copy_list(listint **head)
+listint_t *copy_list(listint_t *head)
 {
 	listint_t *temp, *tmp;
 	listint_t *list_copy, *node;
 
-	temp = *head;
+	temp = head;
 	list_copy = malloc(sizeof(listint_t));
 	if (list_copy == NULL)
 	{
-		printf("Error allocating memory\n");
-		exit(0);
+		return (NULL);
 	}
 	list_copy->n = temp->n;
 	list_copy->next = NULL;
 	temp = temp->next;
 	while (temp != NULL)
 	{
+		node = malloc(sizeof(listint_t));
 		if (node == NULL)
 		{
-			printf("Error allocating memory\n");
-			exit(0);
+			return (NULL);
 		}
 		node->n = temp->n;
 		node->next = NULL;
@@ -61,12 +60,12 @@ int is_palindrome(listint_t **head)
 	listint_t *current;
 	listint_t *prev;
 	listint_t *next;
-	listint_t *line_copy;
+	listint_t *list_copy;
 	listint_t *temp;
 
 	current = *head;
 	temp = *head;
-	list_copy = copy_list(&temp);
+	list_copy = copy_list(temp);
 	prev = NULL;
 	next = NULL;
 	/* reverse list */
