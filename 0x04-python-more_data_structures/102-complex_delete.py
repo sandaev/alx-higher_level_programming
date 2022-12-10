@@ -2,5 +2,8 @@
 def complex_delete(a_dictionary, value):
     
     if value in a_dictionary.values():
-        return ({k: v for k, v in a_dictionary.items() if v != value})
+        for k, v in list(a_dictionary.keys()):
+            if v != value:
+                del a_dictionary[k]
+        return (a_dictionary)
     return (a_dictionary)
