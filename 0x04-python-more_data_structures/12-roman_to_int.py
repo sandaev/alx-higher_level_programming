@@ -2,7 +2,11 @@
 
 def roman_to_int(roman_string):
     dic = {'i': 1, 'v': 5, 'x': 10, 'l': 50, 'c': 100, 'd': 500, 'm': 1000}
-    if roman_string is None or not roman_string.isalpha() or not isinstance(roman_string, str) or len(roman_string) == 0:
+    if not isinstance(roman_string, str):
+        return (0)
+    elif roman_string is None or not roman_string.isalpha():
+        return (0)
+    elif len(roman_string) == 0:
         return (0)
     for i in roman_string:
         if i.lower() not in dic.keys():
