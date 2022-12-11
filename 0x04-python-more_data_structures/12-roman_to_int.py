@@ -5,7 +5,7 @@ def roman_to_int(roman_string):
     if roman_string is None or not roman_string.isalpha():
         return (0)
     for i in roman_string:
-        if i.islower() not in dic.keys():
+        if i.lower() not in dic.keys():
             return (0)
     total = 0
     roman_string = list(roman_string.lower())
