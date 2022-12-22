@@ -25,9 +25,9 @@ class Square:
                 raise TypeError
             if __size < 0:
                 raise ValueError
-        except ValueError:
-            print("size must be >= 0")
         except TypeError:
-            print("size must be an integer")
+            raise Exception("size must be an integer")
+        except ValueError:
+            raise Exception("size must be >= 0")
         else:
             self._Square__size = __size
