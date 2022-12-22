@@ -11,7 +11,7 @@ class Square:
     __size(int) - Length of side of square that must be greater than zero
     '''
 
-    def __init(self, __size=0):
+    def __init__(self, __size=0):
         '''Contsructor of the Sqaure class
 
         Attributes:
