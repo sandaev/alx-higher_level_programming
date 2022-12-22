@@ -25,11 +25,9 @@ class Square:
                 raise TypeError
             if __size < 0:
                 raise ValueError
-            if isinstance(__size, float):
-                raise ValueError
         except TypeError:
             raise Exception("size must be an integer")
         except ValueError:
             raise Exception("size must be >= 0")
         else:
-            self._Square__size = __size
+            self._Square__size = round(__size)
