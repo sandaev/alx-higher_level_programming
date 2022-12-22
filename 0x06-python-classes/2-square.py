@@ -25,6 +25,8 @@ class Square:
                 raise TypeError
             if __size < 0:
                 raise ValueError
+            if isinstance(__size, float):
+                raise ValueError
         except TypeError:
             raise Exception("size must be an integer")
         except ValueError:
