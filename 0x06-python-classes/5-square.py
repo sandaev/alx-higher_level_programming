@@ -64,7 +64,7 @@ class Square:
 
     def my_print(self):
         '''prints to the stdout square with char #'''
-        if self.__Square__size == 0:
+        if self._Square__size == 0:
             print()
         else:
             for row in range(self._Square__size):
