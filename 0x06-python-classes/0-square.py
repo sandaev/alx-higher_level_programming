@@ -2,6 +2,7 @@
 
 '''Contain an empty class that defines a square shape'''
 
+
 class Square:
     '''An empty class that defines a square'''
     pass
