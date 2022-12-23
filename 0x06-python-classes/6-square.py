@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-'''Contains a class that defines a square, calculate area'''
+'''Contains a class that defines a square, calculate area
+
+Name - 6-square
+'''
 
 
 class Square:
