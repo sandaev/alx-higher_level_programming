@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 '''Contains a class that defines a square, calculate area
 Class
 ------
@@ -9,7 +10,7 @@ Methods
 size ():
 gets the size attribute
 
-aize(value): sets the size
+size(value): sets the size
 
 area(): Calcualtes area of square
 
