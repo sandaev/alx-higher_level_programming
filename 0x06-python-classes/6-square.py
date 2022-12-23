@@ -1,7 +1,20 @@
 #!/usr/bin/python3
 '''Contains a class that defines a square, calculate area
+Class
+------
+Square : defines a square
 
-Name - 6-square
+Methods
+------
+size ():
+gets the size attribute
+
+aize(value): sets the size
+
+area(): Calcualtes area of square
+
+my_print(): Prints square
+
 '''
 
 
