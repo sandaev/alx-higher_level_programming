@@ -1,0 +1,23 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check correct arguments
+>>> say_my_name("Sanni", "Jafaru")
+Sanni Jafaru
+
+Checks first_name is string otherwise raise TypeError
+>>> say_my_name(123, "Ozigi") # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: first_name must be a string
+
+Checks last_name is string otherwise raise TypeError
+>>> say_my_name("Sanni", [1, 2]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: last_name must be a string
+
+Checks mandatory arg missing raise TypeError
+>>> say_my_name() # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
