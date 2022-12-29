@@ -1,0 +1,26 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Checks output for correct argument
+>>> text_indentation("""My name is: Sanni Ozigi. How are you and family?""")
+My name is:
+<BLANKLINE>
+Sanni Ozigi.
+<BLANKLINE>
+How are you and family?
+<BLANKLINE>
+<BLANKLINE>
+
+Checks if argument is string, raise TypeError otherwise
+>>> text_indentation(['Nmae', 'Ozigi', ':', 12]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: text must be a string
+
+Checks if argument is empty string
+>>> text_indentation("")
+
+Checks if no argument is parsed
+>>> text_indentation() # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: text_indentation() missing 1 required positional argument: 'text'
