@@ -1,0 +1,80 @@
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+>>> m_a = [[1, 2], [3, 4]]
+>>> m_b = [[1, 2], [3, 4]]
+
+Checks for correctness of function for 2 x 2
+>>> matrix_mul(m_a, m_b)
+[[7, 10], [15, 22]]
+
+Checks for correctness of func for 3 x 3
+>>> m_a = [[12, 8, 4], [3, 17, 14], [9, 8, 10]]
+>>> m_b = [[5, 19, 3], [6, 15, 9], [7, 8, 16]]
+>>> matrix_mul(m_a, m_b)
+[[136, 380, 172], [215, 424, 386], [163, 371, 259]]
+
+Checks for a 4 x 4
+>>> m_a = [[7, 14, 15, 6], [4, 8, 12, 3], [14, 21, 6, 9], [13, 7, 6, 4]]
+>>> m_b = [[5, 7, 14, 2], [8, 16, 4, 9], [13, 6, 8, 4], [6, 3, 2, 4]]
+>>> matrix_mul(m_a, m_b)
+[[378, 381, 286, 224], [258, 237, 190, 140], [370, 497, 346, 277], [223, 251, 266, 129]]
+
+check for non-square matrix
+>>> m_a = [[1, 2]]
+>>> m_b = [[3, 4], [5, 6]]
+>>> matrix_mul(m_a, m_b)
+[[13, 16]]
+
+check for non list - first argument
+>>> matrix_mul("Holberton", [1, 2]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: m_a must be a list
+
+non-square 2nd argument
+>>> matrix_mul([[1, 2, 3]], 123) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: m_b must be a list
+
+Check for empty list - first argument
+>>> matrix_mul([[]], [[1, 2, 3]]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+ValueError: m_a can't be empty
+
+2nd argument
+>>> matrix_mul([[1, 2, 3]], []) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+ValueError: m_b can't be empty
+
+Checks for non int or float - first argument
+>>> matrix_mul([[1, 'a', 3]], [[4], [5], [6]]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: m_a should contain only integers or float
+
+Checks for non int or float - second args
+>>> matrix_mul([[1, 2, 3]], [[4], ['23'], [6]]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: m_b should contain only integers or float
+
+Check for rectangular matrix - first argument
+>>> matrix_mul([[1, 2.7, 3], [4, 5], [6.1, 7.5, 9]], [[4], [23], [6]]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: each row of m_a must be of the same size
+
+Check for rectangular matrix - second argument
+>>> matrix_mul([[4], [23], [6]], [[1, 2.7, 3], [4, 5], [6.1, 7.5, 9]]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: each row of m_b must be of the same size
+
+Checks if m_a and m_b are conformable
+>>> matrix_mul([[12, 8, 4], [3, 17, 14], [9, 8, 10]], [[3, 4], [5, 6]]) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+ValueError: m_a and m_b can't be multiplied
