@@ -2,6 +2,7 @@
 """ FUNCTION THAT WRITES AN OBJECT TO A TEXT
     FILE, USING JSON REPRESENTATION
 """
+import json
 
 
 def save_to_json_file(my_obj, filename):
