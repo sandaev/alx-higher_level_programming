@@ -1,0 +1,41 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Mandatory argument only
+>>> add_integer(3)
+101
+
+Mandatory argument is float
+>>> add_integer(10.5)
+108
+
+Both arguments are float
+>>> add_integer(10.5, 56.897)
+66
+
+Both argumets are less than zero
+>>> add_integer(-1, -1)
+-2
+
+Only optional argument given
+>>> add_integer() #doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Mandatory argument is string
+>>> add_integer('3') #doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: a must be an integer
+
+Checks for string arguments
+>>> add_integer('23', '') #doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: a must be an integer
+
+Check when list is parsed
+>>> add_integer([1, 2, 3]) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+	---
+TypeError: a must be an integer
